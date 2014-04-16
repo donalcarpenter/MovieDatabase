@@ -125,4 +125,26 @@
     completedHandler([NSURL URLWithString:url]);
 }
 
+- (void)loadImagePath:(NSString *)imagePath ofSize:(MDBImageSize)size andType:(MDBImageType)type thenHandleBy:(downloadedImageHandler)handler{
+    
+    // do the heavy lifting on a background thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+        // first get the URL
+        [self tryParseImageName:imagePath ToUrl:^(NSURL *url) {
+       
+            NSData *imageData = [NSData dataWithContentsOfURL:url];
+            UIImage *image = [UIImage imageWithData:imageData];
+            
+            // now that we have the image switch
+            // back to the main thread to handle
+            dispatch_async(dispatch_get_main_queue(), ^{
+                handler(image);
+            });
+            
+        } ofSizeIndex:size andType:type];
+        
+    });
+}
+
 @end

@@ -14,7 +14,6 @@
 		FE04056718FE8FAA00661776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04056618FE8FAA00661776 /* main.m */; };
 		FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */; };
 		FE04056E18FE8FAA00661776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE04056C18FE8FAA00661776 /* Main.storyboard */; };
-		FE04057118FE8FAA00661776 /* MDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04057018FE8FAA00661776 /* MDBViewController.m */; };
 		FE04057318FE8FAA00661776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE04057218FE8FAA00661776 /* Images.xcassets */; };
 		FE04057A18FE8FAA00661776 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04057918FE8FAA00661776 /* XCTest.framework */; };
 		FE04057B18FE8FAA00661776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055A18FE8FAA00661776 /* Foundation.framework */; };
@@ -35,6 +34,17 @@
 		FE0405A718FE9E9B00661776 /* MDBGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A518FE9E9B00661776 /* MDBGenre.m */; };
 		FE0405AA18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */; };
 		FE0405AB18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */; };
+		FE0405AF18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405AE18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m */; };
+		FE0405B018FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405AE18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m */; };
+		FE0405B418FF15D800661776 /* MDBStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B318FF15D800661776 /* MDBStackLayout.m */; };
+		FE0405B518FF15D800661776 /* MDBStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B318FF15D800661776 /* MDBStackLayout.m */; };
+		FE0405BA18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B718FF1B1E00661776 /* MDBCollectionViewCell.m */; };
+		FE0405BB18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B718FF1B1E00661776 /* MDBCollectionViewCell.m */; };
+		FE0405BC18FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B918FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m */; };
+		FE0405BD18FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405B918FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m */; };
+		FE0405BF18FF1B3300661776 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0405BE18FF1B3300661776 /* QuartzCore.framework */; };
+		FE0405C218FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */; };
+		FE0405C318FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +69,6 @@
 		FE04056918FE8FAA00661776 /* MDBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBAppDelegate.h; sourceTree = "<group>"; };
 		FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDBAppDelegate.m; sourceTree = "<group>"; };
 		FE04056D18FE8FAA00661776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE04056F18FE8FAA00661776 /* MDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBViewController.h; sourceTree = "<group>"; };
-		FE04057018FE8FAA00661776 /* MDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDBViewController.m; sourceTree = "<group>"; };
 		FE04057218FE8FAA00661776 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE04057818FE8FAA00661776 /* MovieDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE04057918FE8FAA00661776 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,6 +89,17 @@
 		FE0405A518FE9E9B00661776 /* MDBGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBGenre.m; path = Model/MDBGenre.m; sourceTree = "<group>"; };
 		FE0405A818FEC67B00661776 /* MDBImageUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBImageUrlBuilder.h; path = Model/MDBImageUrlBuilder.h; sourceTree = "<group>"; };
 		FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBImageUrlBuilder.m; path = Model/MDBImageUrlBuilder.m; sourceTree = "<group>"; };
+		FE0405AD18FF153B00661776 /* MDBMovieByGenreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMovieByGenreCollectionViewController.h; path = ViewControllers/MDBMovieByGenreCollectionViewController.h; sourceTree = "<group>"; };
+		FE0405AE18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMovieByGenreCollectionViewController.m; path = ViewControllers/MDBMovieByGenreCollectionViewController.m; sourceTree = "<group>"; };
+		FE0405B218FF15D800661776 /* MDBStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBStackLayout.h; path = View/MDBStackLayout.h; sourceTree = "<group>"; };
+		FE0405B318FF15D800661776 /* MDBStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBStackLayout.m; path = View/MDBStackLayout.m; sourceTree = "<group>"; };
+		FE0405B618FF1B1E00661776 /* MDBCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBCollectionViewCell.h; path = View/MDBCollectionViewCell.h; sourceTree = "<group>"; };
+		FE0405B718FF1B1E00661776 /* MDBCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBCollectionViewCell.m; path = View/MDBCollectionViewCell.m; sourceTree = "<group>"; };
+		FE0405B818FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBCollectionViewSupplementaryCellView.h; path = View/MDBCollectionViewSupplementaryCellView.h; sourceTree = "<group>"; };
+		FE0405B918FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBCollectionViewSupplementaryCellView.m; path = View/MDBCollectionViewSupplementaryCellView.m; sourceTree = "<group>"; };
+		FE0405BE18FF1B3300661776 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FE0405C018FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMoviesInGenreCollectionViewController.h; path = ViewControllers/MDBMoviesInGenreCollectionViewController.h; sourceTree = "<group>"; };
+		FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMoviesInGenreCollectionViewController.m; path = ViewControllers/MDBMoviesInGenreCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0405BF18FF1B3300661776 /* QuartzCore.framework in Frameworks */,
 				FE04055D18FE8FAA00661776 /* CoreGraphics.framework in Frameworks */,
 				FE04055F18FE8FAA00661776 /* UIKit.framework in Frameworks */,
 				FE04055B18FE8FAA00661776 /* Foundation.framework in Frameworks */,
@@ -129,6 +149,7 @@
 		FE04055918FE8FAA00661776 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE0405BE18FF1B3300661776 /* QuartzCore.framework */,
 				FE04055A18FE8FAA00661776 /* Foundation.framework */,
 				FE04055C18FE8FAA00661776 /* CoreGraphics.framework */,
 				FE04055E18FE8FAA00661776 /* UIKit.framework */,
@@ -140,12 +161,12 @@
 		FE04056018FE8FAA00661776 /* MovieDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				FE0405B118FF155900661776 /* View */,
+				FE0405AC18FF14FE00661776 /* View Controllers */,
 				FE04058F18FE8FD700661776 /* Model */,
 				FE04056918FE8FAA00661776 /* MDBAppDelegate.h */,
 				FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */,
 				FE04056C18FE8FAA00661776 /* Main.storyboard */,
-				FE04056F18FE8FAA00661776 /* MDBViewController.h */,
-				FE04057018FE8FAA00661776 /* MDBViewController.m */,
 				FE04057218FE8FAA00661776 /* Images.xcassets */,
 				FE04056118FE8FAA00661776 /* Supporting Files */,
 			);
@@ -200,6 +221,30 @@
 				FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FE0405AC18FF14FE00661776 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE0405AD18FF153B00661776 /* MDBMovieByGenreCollectionViewController.h */,
+				FE0405AE18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m */,
+				FE0405C018FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.h */,
+				FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FE0405B118FF155900661776 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE0405B218FF15D800661776 /* MDBStackLayout.h */,
+				FE0405B318FF15D800661776 /* MDBStackLayout.m */,
+				FE0405B618FF1B1E00661776 /* MDBCollectionViewCell.h */,
+				FE0405B718FF1B1E00661776 /* MDBCollectionViewCell.m */,
+				FE0405B818FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.h */,
+				FE0405B918FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +346,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE04059A18FE903500661776 /* MDBMovie.m in Sources */,
+				FE0405B418FF15D800661776 /* MDBStackLayout.m in Sources */,
 				FE04059618FE902400661776 /* MDBPopularMovies.m in Sources */,
 				FE0405A218FE905200661776 /* MDBCast.m in Sources */,
-				FE04057118FE8FAA00661776 /* MDBViewController.m in Sources */,
+				FE0405BA18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */,
 				FE0405A618FE9E9B00661776 /* MDBGenre.m in Sources */,
 				FE0405AA18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */,
+				FE0405BC18FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m in Sources */,
+				FE0405C218FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */,
 				FE04059E18FE904100661776 /* MDBActor.m in Sources */,
+				FE0405AF18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */,
 				FE04059218FE900600661776 /* MDBModel.m in Sources */,
 				FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */,
 				FE04056718FE8FAA00661776 /* main.m in Sources */,
@@ -317,13 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0405B518FF15D800661776 /* MDBStackLayout.m in Sources */,
+				FE0405BD18FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m in Sources */,
 				FE04059B18FE903500661776 /* MDBMovie.m in Sources */,
+				FE0405B018FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */,
 				FE04059718FE902400661776 /* MDBPopularMovies.m in Sources */,
 				FE0405A318FE905200661776 /* MDBCast.m in Sources */,
 				FE04059F18FE904100661776 /* MDBActor.m in Sources */,
 				FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */,
 				FE0405A718FE9E9B00661776 /* MDBGenre.m in Sources */,
 				FE04059318FE900600661776 /* MDBModel.m in Sources */,
+				FE0405BB18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */,
+				FE0405C318FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */,
 				FE0405AB18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

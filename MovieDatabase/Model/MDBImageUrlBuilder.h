@@ -11,6 +11,7 @@
 // create enums for each image type
 
 typedef void (^completedUrlHandler)(NSURL* url);
+typedef void (^downloadedImageHandler)(UIImage* image);
 
 typedef enum {
     MDBImageSizeTiny,
@@ -40,5 +41,5 @@ typedef enum {
                      ToUrl: (completedUrlHandler) completedHandler
                ofSizeIndex: (MDBImageSize) size
                    andType:(MDBImageType) type;
-
+- (void) loadImagePath: (NSString *) imagePath ofSize: (MDBImageSize) size andType: (MDBImageType) type thenHandleBy: (downloadedImageHandler) handler;
 @end

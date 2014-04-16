@@ -34,6 +34,7 @@ NSString * const MDBMovieDidFinishLoadingNotification = @"MDBMovieDidFinishLoadi
             self->_releaseYear = [[jsonData[@"release_date"] substringToIndex:4] integerValue];
             self->_averageRating = [jsonData[@"vote_average"] floatValue];
             self->_trailerId = [jsonData valueForKeyPath:@"trailers.youtube.source"];
+            self->_posterPath = jsonData[@"poster_path"];
             
             NSArray *genres = jsonData[@"genres"];
             

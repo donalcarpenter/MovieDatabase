@@ -57,6 +57,10 @@ NSString * const MDBMovieCollectionDidFinishLoadingNotification = @"MDBMovieColl
             
             self.movies = array;
             
+            // now populate the dictionary
+            
+            self.moviesByGenre = [self mapByGenre:self.movies];
+            
             success(self.movies, self.moviesByGenre);
             
             self->_loading = NO;
@@ -69,5 +73,31 @@ NSString * const MDBMovieCollectionDidFinishLoadingNotification = @"MDBMovieColl
         
     }];
     
+}
+
+- (NSDictionary *) mapByGenre: (NSArray*) movies{
+    
+    __block NSMutableDictionary *genres = [NSMutableDictionary dictionary];
+    
+    [movies enumerateObjectsUsingBlock:^(MDBMovie *movie, NSUInteger idx, BOOL *stop) {
+        
+        // quick hack - ensure all the data is loaded
+        while(movie.loading)
+            sleep(1);
+        
+
+        [movie.genres enumerateObjectsUsingBlock:^(NSString *genre, NSUInteger idx, BOOL *stop) {
+            if(!genres[genre]){
+                [genres setObject:[NSMutableArray arrayWithObject:movie] forKey:genre];
+            }
+            else{
+                NSMutableArray *moviesForGenre = genres[genre];
+                [moviesForGenre addObject:movie];
+            }
+        }];
+        
+    }];
+    
+    return genres;
 }
 @end
