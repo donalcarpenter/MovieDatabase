@@ -21,6 +21,20 @@
 		FE04057C18FE8FAA00661776 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055E18FE8FAA00661776 /* UIKit.framework */; };
 		FE04058418FE8FAA00661776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE04058218FE8FAA00661776 /* InfoPlist.strings */; };
 		FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */; };
+		FE04059218FE900600661776 /* MDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059118FE900600661776 /* MDBModel.m */; };
+		FE04059318FE900600661776 /* MDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059118FE900600661776 /* MDBModel.m */; };
+		FE04059618FE902400661776 /* MDBPopularMovies.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059518FE902400661776 /* MDBPopularMovies.m */; };
+		FE04059718FE902400661776 /* MDBPopularMovies.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059518FE902400661776 /* MDBPopularMovies.m */; };
+		FE04059A18FE903500661776 /* MDBMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059918FE903500661776 /* MDBMovie.m */; };
+		FE04059B18FE903500661776 /* MDBMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059918FE903500661776 /* MDBMovie.m */; };
+		FE04059E18FE904100661776 /* MDBActor.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059D18FE904100661776 /* MDBActor.m */; };
+		FE04059F18FE904100661776 /* MDBActor.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04059D18FE904100661776 /* MDBActor.m */; };
+		FE0405A218FE905200661776 /* MDBCast.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A118FE905200661776 /* MDBCast.m */; };
+		FE0405A318FE905200661776 /* MDBCast.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A118FE905200661776 /* MDBCast.m */; };
+		FE0405A618FE9E9B00661776 /* MDBGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A518FE9E9B00661776 /* MDBGenre.m */; };
+		FE0405A718FE9E9B00661776 /* MDBGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A518FE9E9B00661776 /* MDBGenre.m */; };
+		FE0405AA18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */; };
+		FE0405AB18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +67,20 @@
 		FE04058118FE8FAA00661776 /* MovieDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieDatabaseTests-Info.plist"; sourceTree = "<group>"; };
 		FE04058318FE8FAA00661776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDatabaseTests.m; sourceTree = "<group>"; };
+		FE04059018FE900600661776 /* MDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBModel.h; path = Model/MDBModel.h; sourceTree = "<group>"; };
+		FE04059118FE900600661776 /* MDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBModel.m; path = Model/MDBModel.m; sourceTree = "<group>"; };
+		FE04059418FE902400661776 /* MDBPopularMovies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBPopularMovies.h; sourceTree = "<group>"; };
+		FE04059518FE902400661776 /* MDBPopularMovies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBPopularMovies.m; sourceTree = "<group>"; };
+		FE04059818FE903500661776 /* MDBMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBMovie.h; sourceTree = "<group>"; };
+		FE04059918FE903500661776 /* MDBMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBMovie.m; sourceTree = "<group>"; };
+		FE04059C18FE904100661776 /* MDBActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBActor.h; sourceTree = "<group>"; };
+		FE04059D18FE904100661776 /* MDBActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBActor.m; sourceTree = "<group>"; };
+		FE0405A018FE905200661776 /* MDBCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBCast.h; sourceTree = "<group>"; };
+		FE0405A118FE905200661776 /* MDBCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBCast.m; sourceTree = "<group>"; };
+		FE0405A418FE9E9B00661776 /* MDBGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBGenre.h; sourceTree = "<group>"; };
+		FE0405A518FE9E9B00661776 /* MDBGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBGenre.m; sourceTree = "<group>"; };
+		FE0405A818FEC67B00661776 /* MDBImageUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBImageUrlBuilder.h; sourceTree = "<group>"; };
+		FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBImageUrlBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +140,7 @@
 		FE04056018FE8FAA00661776 /* MovieDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				FE04058F18FE8FD700661776 /* Model */,
 				FE04056918FE8FAA00661776 /* MDBAppDelegate.h */,
 				FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */,
 				FE04056C18FE8FAA00661776 /* Main.storyboard */,
@@ -150,6 +179,27 @@
 				FE04058218FE8FAA00661776 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE04058F18FE8FD700661776 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE04059018FE900600661776 /* MDBModel.h */,
+				FE04059118FE900600661776 /* MDBModel.m */,
+				FE04059418FE902400661776 /* MDBPopularMovies.h */,
+				FE04059518FE902400661776 /* MDBPopularMovies.m */,
+				FE04059818FE903500661776 /* MDBMovie.h */,
+				FE04059918FE903500661776 /* MDBMovie.m */,
+				FE04059C18FE904100661776 /* MDBActor.h */,
+				FE04059D18FE904100661776 /* MDBActor.m */,
+				FE0405A018FE905200661776 /* MDBCast.h */,
+				FE0405A118FE905200661776 /* MDBCast.m */,
+				FE0405A418FE9E9B00661776 /* MDBGenre.h */,
+				FE0405A518FE9E9B00661776 /* MDBGenre.m */,
+				FE0405A818FEC67B00661776 /* MDBImageUrlBuilder.h */,
+				FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE04059A18FE903500661776 /* MDBMovie.m in Sources */,
+				FE04059618FE902400661776 /* MDBPopularMovies.m in Sources */,
+				FE0405A218FE905200661776 /* MDBCast.m in Sources */,
 				FE04057118FE8FAA00661776 /* MDBViewController.m in Sources */,
+				FE0405A618FE9E9B00661776 /* MDBGenre.m in Sources */,
+				FE0405AA18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */,
+				FE04059E18FE904100661776 /* MDBActor.m in Sources */,
+				FE04059218FE900600661776 /* MDBModel.m in Sources */,
 				FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */,
 				FE04056718FE8FAA00661776 /* main.m in Sources */,
 			);
@@ -260,7 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE04059B18FE903500661776 /* MDBMovie.m in Sources */,
+				FE04059718FE902400661776 /* MDBPopularMovies.m in Sources */,
+				FE0405A318FE905200661776 /* MDBCast.m in Sources */,
+				FE04059F18FE904100661776 /* MDBActor.m in Sources */,
 				FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */,
+				FE0405A718FE9E9B00661776 /* MDBGenre.m in Sources */,
+				FE04059318FE900600661776 /* MDBModel.m in Sources */,
+				FE0405AB18FEC67B00661776 /* MDBImageUrlBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
