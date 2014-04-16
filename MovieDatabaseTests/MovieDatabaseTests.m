@@ -38,6 +38,16 @@
     
     [pop load:^(NSArray *movies, NSDictionary *moviesByGenre) {
         XCTAssert([movies count]>0, @"no movies returned");
+        
+        for(int i = 0; i < [movies count]; i++){
+            MDBMovie *m = movies[i];
+            
+            while(m.loading)
+                sleep(1);
+            
+            NSLog(@"Movie: %@", m.title);
+        }
+        
         [loading unlock];
     } handleError:^(NSString *errorDesc, NSUInteger errorCode) {
         XCTFail(@"Error: %@, %d", errorDesc, errorCode);

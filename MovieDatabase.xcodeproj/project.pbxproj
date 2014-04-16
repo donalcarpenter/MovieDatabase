@@ -69,18 +69,18 @@
 		FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDatabaseTests.m; sourceTree = "<group>"; };
 		FE04059018FE900600661776 /* MDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBModel.h; path = Model/MDBModel.h; sourceTree = "<group>"; };
 		FE04059118FE900600661776 /* MDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBModel.m; path = Model/MDBModel.m; sourceTree = "<group>"; };
-		FE04059418FE902400661776 /* MDBPopularMovies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBPopularMovies.h; sourceTree = "<group>"; };
-		FE04059518FE902400661776 /* MDBPopularMovies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBPopularMovies.m; sourceTree = "<group>"; };
-		FE04059818FE903500661776 /* MDBMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBMovie.h; sourceTree = "<group>"; };
-		FE04059918FE903500661776 /* MDBMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBMovie.m; sourceTree = "<group>"; };
-		FE04059C18FE904100661776 /* MDBActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBActor.h; sourceTree = "<group>"; };
-		FE04059D18FE904100661776 /* MDBActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBActor.m; sourceTree = "<group>"; };
-		FE0405A018FE905200661776 /* MDBCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBCast.h; sourceTree = "<group>"; };
-		FE0405A118FE905200661776 /* MDBCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBCast.m; sourceTree = "<group>"; };
-		FE0405A418FE9E9B00661776 /* MDBGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBGenre.h; sourceTree = "<group>"; };
-		FE0405A518FE9E9B00661776 /* MDBGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBGenre.m; sourceTree = "<group>"; };
-		FE0405A818FEC67B00661776 /* MDBImageUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBImageUrlBuilder.h; sourceTree = "<group>"; };
-		FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBImageUrlBuilder.m; sourceTree = "<group>"; };
+		FE04059418FE902400661776 /* MDBPopularMovies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBPopularMovies.h; path = Model/MDBPopularMovies.h; sourceTree = "<group>"; };
+		FE04059518FE902400661776 /* MDBPopularMovies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBPopularMovies.m; path = Model/MDBPopularMovies.m; sourceTree = "<group>"; };
+		FE04059818FE903500661776 /* MDBMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMovie.h; path = Model/MDBMovie.h; sourceTree = "<group>"; };
+		FE04059918FE903500661776 /* MDBMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMovie.m; path = Model/MDBMovie.m; sourceTree = "<group>"; };
+		FE04059C18FE904100661776 /* MDBActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBActor.h; path = Model/MDBActor.h; sourceTree = "<group>"; };
+		FE04059D18FE904100661776 /* MDBActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBActor.m; path = Model/MDBActor.m; sourceTree = "<group>"; };
+		FE0405A018FE905200661776 /* MDBCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBCast.h; path = Model/MDBCast.h; sourceTree = "<group>"; };
+		FE0405A118FE905200661776 /* MDBCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBCast.m; path = Model/MDBCast.m; sourceTree = "<group>"; };
+		FE0405A418FE9E9B00661776 /* MDBGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBGenre.h; path = Model/MDBGenre.h; sourceTree = "<group>"; };
+		FE0405A518FE9E9B00661776 /* MDBGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBGenre.m; path = Model/MDBGenre.m; sourceTree = "<group>"; };
+		FE0405A818FEC67B00661776 /* MDBImageUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBImageUrlBuilder.h; path = Model/MDBImageUrlBuilder.h; sourceTree = "<group>"; };
+		FE0405A918FEC67B00661776 /* MDBImageUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBImageUrlBuilder.m; path = Model/MDBImageUrlBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
