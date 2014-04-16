@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE04055B18FE8FAA00661776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055A18FE8FAA00661776 /* Foundation.framework */; };
+		FE04055D18FE8FAA00661776 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055C18FE8FAA00661776 /* CoreGraphics.framework */; };
+		FE04055F18FE8FAA00661776 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055E18FE8FAA00661776 /* UIKit.framework */; };
+		FE04056518FE8FAA00661776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE04056318FE8FAA00661776 /* InfoPlist.strings */; };
+		FE04056718FE8FAA00661776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04056618FE8FAA00661776 /* main.m */; };
+		FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */; };
+		FE04056E18FE8FAA00661776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE04056C18FE8FAA00661776 /* Main.storyboard */; };
+		FE04057118FE8FAA00661776 /* MDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04057018FE8FAA00661776 /* MDBViewController.m */; };
+		FE04057318FE8FAA00661776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE04057218FE8FAA00661776 /* Images.xcassets */; };
+		FE04057A18FE8FAA00661776 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04057918FE8FAA00661776 /* XCTest.framework */; };
+		FE04057B18FE8FAA00661776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055A18FE8FAA00661776 /* Foundation.framework */; };
+		FE04057C18FE8FAA00661776 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04055E18FE8FAA00661776 /* UIKit.framework */; };
+		FE04058418FE8FAA00661776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE04058218FE8FAA00661776 /* InfoPlist.strings */; };
+		FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE04057D18FE8FAA00661776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE04054F18FE8FAA00661776 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE04055618FE8FAA00661776;
+			remoteInfo = MovieDatabase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE04055718FE8FAA00661776 /* MovieDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE04055A18FE8FAA00661776 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE04055C18FE8FAA00661776 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE04055E18FE8FAA00661776 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE04056218FE8FAA00661776 /* MovieDatabase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieDatabase-Info.plist"; sourceTree = "<group>"; };
+		FE04056418FE8FAA00661776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE04056618FE8FAA00661776 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE04056818FE8FAA00661776 /* MovieDatabase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieDatabase-Prefix.pch"; sourceTree = "<group>"; };
+		FE04056918FE8FAA00661776 /* MDBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBAppDelegate.h; sourceTree = "<group>"; };
+		FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDBAppDelegate.m; sourceTree = "<group>"; };
+		FE04056D18FE8FAA00661776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE04056F18FE8FAA00661776 /* MDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDBViewController.h; sourceTree = "<group>"; };
+		FE04057018FE8FAA00661776 /* MDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDBViewController.m; sourceTree = "<group>"; };
+		FE04057218FE8FAA00661776 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE04057818FE8FAA00661776 /* MovieDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE04057918FE8FAA00661776 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE04058118FE8FAA00661776 /* MovieDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieDatabaseTests-Info.plist"; sourceTree = "<group>"; };
+		FE04058318FE8FAA00661776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDatabaseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE04055418FE8FAA00661776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04055D18FE8FAA00661776 /* CoreGraphics.framework in Frameworks */,
+				FE04055F18FE8FAA00661776 /* UIKit.framework in Frameworks */,
+				FE04055B18FE8FAA00661776 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE04057518FE8FAA00661776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04057A18FE8FAA00661776 /* XCTest.framework in Frameworks */,
+				FE04057C18FE8FAA00661776 /* UIKit.framework in Frameworks */,
+				FE04057B18FE8FAA00661776 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE04054E18FE8FAA00661776 = {
+			isa = PBXGroup;
+			children = (
+				FE04056018FE8FAA00661776 /* MovieDatabase */,
+				FE04057F18FE8FAA00661776 /* MovieDatabaseTests */,
+				FE04055918FE8FAA00661776 /* Frameworks */,
+				FE04055818FE8FAA00661776 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE04055818FE8FAA00661776 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE04055718FE8FAA00661776 /* MovieDatabase.app */,
+				FE04057818FE8FAA00661776 /* MovieDatabaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE04055918FE8FAA00661776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE04055A18FE8FAA00661776 /* Foundation.framework */,
+				FE04055C18FE8FAA00661776 /* CoreGraphics.framework */,
+				FE04055E18FE8FAA00661776 /* UIKit.framework */,
+				FE04057918FE8FAA00661776 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE04056018FE8FAA00661776 /* MovieDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				FE04056918FE8FAA00661776 /* MDBAppDelegate.h */,
+				FE04056A18FE8FAA00661776 /* MDBAppDelegate.m */,
+				FE04056C18FE8FAA00661776 /* Main.storyboard */,
+				FE04056F18FE8FAA00661776 /* MDBViewController.h */,
+				FE04057018FE8FAA00661776 /* MDBViewController.m */,
+				FE04057218FE8FAA00661776 /* Images.xcassets */,
+				FE04056118FE8FAA00661776 /* Supporting Files */,
+			);
+			path = MovieDatabase;
+			sourceTree = "<group>";
+		};
+		FE04056118FE8FAA00661776 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE04056218FE8FAA00661776 /* MovieDatabase-Info.plist */,
+				FE04056318FE8FAA00661776 /* InfoPlist.strings */,
+				FE04056618FE8FAA00661776 /* main.m */,
+				FE04056818FE8FAA00661776 /* MovieDatabase-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE04057F18FE8FAA00661776 /* MovieDatabaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE04058518FE8FAA00661776 /* MovieDatabaseTests.m */,
+				FE04058018FE8FAA00661776 /* Supporting Files */,
+			);
+			path = MovieDatabaseTests;
+			sourceTree = "<group>";
+		};
+		FE04058018FE8FAA00661776 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE04058118FE8FAA00661776 /* MovieDatabaseTests-Info.plist */,
+				FE04058218FE8FAA00661776 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE04055618FE8FAA00661776 /* MovieDatabase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE04058918FE8FAA00661776 /* Build configuration list for PBXNativeTarget "MovieDatabase" */;
+			buildPhases = (
+				FE04055318FE8FAA00661776 /* Sources */,
+				FE04055418FE8FAA00661776 /* Frameworks */,
+				FE04055518FE8FAA00661776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovieDatabase;
+			productName = MovieDatabase;
+			productReference = FE04055718FE8FAA00661776 /* MovieDatabase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE04057718FE8FAA00661776 /* MovieDatabaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE04058C18FE8FAA00661776 /* Build configuration list for PBXNativeTarget "MovieDatabaseTests" */;
+			buildPhases = (
+				FE04057418FE8FAA00661776 /* Sources */,
+				FE04057518FE8FAA00661776 /* Frameworks */,
+				FE04057618FE8FAA00661776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE04057E18FE8FAA00661776 /* PBXTargetDependency */,
+			);
+			name = MovieDatabaseTests;
+			productName = MovieDatabaseTests;
+			productReference = FE04057818FE8FAA00661776 /* MovieDatabaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE04054F18FE8FAA00661776 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MDB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = donal;
+				TargetAttributes = {
+					FE04057718FE8FAA00661776 = {
+						TestTargetID = FE04055618FE8FAA00661776;
+					};
+				};
+			};
+			buildConfigurationList = FE04055218FE8FAA00661776 /* Build configuration list for PBXProject "MovieDatabase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE04054E18FE8FAA00661776;
+			productRefGroup = FE04055818FE8FAA00661776 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE04055618FE8FAA00661776 /* MovieDatabase */,
+				FE04057718FE8FAA00661776 /* MovieDatabaseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE04055518FE8FAA00661776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04057318FE8FAA00661776 /* Images.xcassets in Resources */,
+				FE04056518FE8FAA00661776 /* InfoPlist.strings in Resources */,
+				FE04056E18FE8FAA00661776 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE04057618FE8FAA00661776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04058418FE8FAA00661776 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE04055318FE8FAA00661776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04057118FE8FAA00661776 /* MDBViewController.m in Sources */,
+				FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */,
+				FE04056718FE8FAA00661776 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE04057418FE8FAA00661776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE04057E18FE8FAA00661776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE04055618FE8FAA00661776 /* MovieDatabase */;
+			targetProxy = FE04057D18FE8FAA00661776 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE04056318FE8FAA00661776 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE04056418FE8FAA00661776 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE04056C18FE8FAA00661776 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE04056D18FE8FAA00661776 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE04058218FE8FAA00661776 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE04058318FE8FAA00661776 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE04058718FE8FAA00661776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE04058818FE8FAA00661776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE04058A18FE8FAA00661776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MovieDatabase/MovieDatabase-Prefix.pch";
+				INFOPLIST_FILE = "MovieDatabase/MovieDatabase-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE04058B18FE8FAA00661776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MovieDatabase/MovieDatabase-Prefix.pch";
+				INFOPLIST_FILE = "MovieDatabase/MovieDatabase-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE04058D18FE8FAA00661776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MovieDatabase.app/MovieDatabase";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MovieDatabase/MovieDatabase-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MovieDatabaseTests/MovieDatabaseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE04058E18FE8FAA00661776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MovieDatabase.app/MovieDatabase";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MovieDatabase/MovieDatabase-Prefix.pch";
+				INFOPLIST_FILE = "MovieDatabaseTests/MovieDatabaseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE04055218FE8FAA00661776 /* Build configuration list for PBXProject "MovieDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE04058718FE8FAA00661776 /* Debug */,
+				FE04058818FE8FAA00661776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE04058918FE8FAA00661776 /* Build configuration list for PBXNativeTarget "MovieDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE04058A18FE8FAA00661776 /* Debug */,
+				FE04058B18FE8FAA00661776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE04058C18FE8FAA00661776 /* Build configuration list for PBXNativeTarget "MovieDatabaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE04058D18FE8FAA00661776 /* Debug */,
+				FE04058E18FE8FAA00661776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE04054F18FE8FAA00661776 /* Project object */;
+}
