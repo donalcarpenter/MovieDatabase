@@ -37,9 +37,9 @@
     dispatch_once(&onceToken, ^{
         sharedBuilderInner = [self new];
         
+        [sharedBuilderInner->lockUntilSharedInstanceIsLoaded lock];
         // now load the configuration
         sharedBuilderInner->_loading = YES;
-        [sharedBuilderInner->lockUntilSharedInstanceIsLoaded lock];
         
         NSString* uritmpl = @"%@configuration?api_key=%@";
         
@@ -58,15 +58,15 @@
             sharedBuilderInner->_stillImageSizes = imageConfig[@"still_sizes"];
             
             sharedBuilderInner->_loading = NO;
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
             [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
+            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
             
         } andErrorWith:^(NSString *errorDesc, NSUInteger errorCode) {
             // noop
             
             sharedBuilderInner->_loading = NO;
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
             [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
+            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
         }];
         
     });
@@ -127,13 +127,37 @@
 
 - (void)loadImagePath:(NSString *)imagePath ofSize:(MDBImageSize)size andType:(MDBImageType)type thenHandleBy:(downloadedImageHandler)handler{
     
+    
+    NSMutableString *cacheFileName = [imagePath mutableCopy];
+    [cacheFileName insertString:[NSString stringWithFormat:@"_%d_%d", type, size] atIndex:1];
+    
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    
+    NSString *cacheFile = [cachesPath stringByAppendingPathComponent:cacheFileName];
+    
+    
+
+    // first see if we have the image in cache
+    
     // do the heavy lifting on a background thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         // first get the URL
         [self tryParseImageName:imagePath ToUrl:^(NSURL *url) {
        
-            NSData *imageData = [NSData dataWithContentsOfURL:url];
+            
+            NSData *imageData;
+            
+            if([[NSFileManager defaultManager] fileExistsAtPath:cacheFile]){
+                imageData = [NSData dataWithContentsOfFile:cacheFile];
+            }else{
+                imageData = [NSData dataWithContentsOfURL:url];
+
+                // now save to cache
+                [imageData writeToFile:cacheFile atomically:NO];
+            }
+            
+
             UIImage *image = [UIImage imageWithData:imageData];
             
             // now that we have the image switch

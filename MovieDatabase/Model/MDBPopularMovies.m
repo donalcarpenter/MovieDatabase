@@ -61,7 +61,9 @@ NSString * const MDBMovieCollectionDidFinishLoadingNotification = @"MDBMovieColl
             
             self.moviesByGenre = [self mapByGenre:self.movies];
             
-            success(self.movies, self.moviesByGenre);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                success(self.movies, self.moviesByGenre);
+            });
             
             self->_loading = NO;
         });

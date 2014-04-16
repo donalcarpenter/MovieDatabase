@@ -91,9 +91,8 @@ static NSString * const TitleIdentifier = @"Title";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     MDBCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    
     
     MDBMovie *film = self.moviesByGenre[self.genreByIndex[indexPath.section]][indexPath.row];
     
@@ -114,8 +113,6 @@ static NSString * const TitleIdentifier = @"Title";
     operation.queuePriority = (indexPath.row == 0) ? NSOperationQueuePriorityHigh : NSOperationQueuePriorityNormal;
     
     [self.thumbnailQueue addOperation:operation];
-    
-    
     
     return cell;
 }
@@ -247,7 +244,7 @@ static NSString * const TitleIdentifier = @"Title";
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
-    return 0.2;
+    return 0.4;
 }
 
 @end

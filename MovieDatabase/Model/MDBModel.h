@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define API_KEY @"8740b876624a251072f14e1c009a369f"
-#define BASE_URL @"https://api.themoviedb.org/3/"
+#define BASE_URL @"http://api.themoviedb.org/3/"
 
 typedef void (^loadError)(NSString* errorDesc, NSUInteger errorCode);
 

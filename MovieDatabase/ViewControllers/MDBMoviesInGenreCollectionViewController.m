@@ -104,7 +104,7 @@ static NSString * const CellIdentifier = @"Cell";
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
-    return 0.2;
+    return 0.4;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
@@ -128,7 +128,8 @@ static NSString * const CellIdentifier = @"Cell";
     NSArray *genreMovies =  b.moviesByGenre[b.genreByIndex[b.selectedPath.section]];
     
     
-    for (NSInteger i = 0; i < [genreMovies count]; i++) {
+    for (NSInteger i = [genreMovies count] - 1; i >= 0; i--) {
+        
         UICollectionViewLayoutAttributes *finalLayoutAttrs = [b.collectionView layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
         
         MDBCollectionViewCell *sourceCell = (MDBCollectionViewCell*)[a.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:0]];
