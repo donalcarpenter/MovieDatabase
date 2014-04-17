@@ -139,6 +139,9 @@
 
 - (void)loadImagePath:(NSString *)imagePath ofSize:(MDBImageSize)size andType:(MDBImageType)type thenHandleBy:(downloadedImageHandler)handler{
     
+    if([NSNull null] == (id)imagePath){
+        return;
+    }
     
     NSMutableString *cacheFileName = [imagePath mutableCopy];
     [cacheFileName insertString:[NSString stringWithFormat:@"_%d_%d", type, size] atIndex:1];

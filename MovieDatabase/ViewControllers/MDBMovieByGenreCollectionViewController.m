@@ -14,6 +14,7 @@
 #import "MDBPopularMovies.h"
 #import "MDBMovie.h"
 #import "MDBImageUrlBuilder.h"
+#import "MDBMovieDetailsViewController.h"
 
 static NSString * const CellIdentifier = @"Cell";
 static NSString * const TitleIdentifier = @"Title";
@@ -38,12 +39,45 @@ static NSString * const TitleIdentifier = @"Title";
     
     [self.collectionView registerClass:[MDBCollectionViewSupplementaryCellView class] forSupplementaryViewOfKind:StackLayoutSectionKind withReuseIdentifier:TitleIdentifier];
     
-    // go get the data
+    [self reloadData];
     
-    // TODO: show spinner
+    self.thumbnailQueue = [[NSOperationQueue alloc] init];
+    self.thumbnailQueue.maxConcurrentOperationCount = 3;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+    self.navigationController.delegate = self;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self resignFirstResponder];
+    if(self.navigationController.delegate == self){
+        self.navigationController.delegate = nil;
+    }
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if(motion != UIEventSubtypeMotionShake)
+        return;
     
+
+    [self reloadData];
+}
+
+- (void) reloadData{
     MDBPopularMovies *popularMovies = [MDBPopularMovies new];
+    
+    UIAlertView *loading = [[UIAlertView alloc] initWithTitle:@"Loading..." message:@"retrieving movies and storing locally (shake to refresh)" delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+
+    [loading show];
+    
     [popularMovies load:^(NSArray *movies, NSDictionary *moviesByGenre) {
+        
+        [loading dismissWithClickedButtonIndex:0 animated:YES];
+        
         self.moviesByGenre = moviesByGenre;
         self.genreByIndex = [moviesByGenre allKeys];
         [self.collectionView reloadData];
@@ -52,20 +86,6 @@ static NSString * const TitleIdentifier = @"Title";
         // TODO: show error notifications
         
     }];
-    
-    
-    self.thumbnailQueue = [[NSOperationQueue alloc] init];
-    self.thumbnailQueue.maxConcurrentOperationCount = 3;
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    self.navigationController.delegate = self;
-}
-
-- (void)viewDidDisappear:(BOOL)animated{
-    if(self.navigationController.delegate == self){
-        self.navigationController.delegate = nil;
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +93,11 @@ static NSString * const TitleIdentifier = @"Title";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
 
 #pragma mark - UICollectionViewDataSource
 
@@ -126,21 +151,30 @@ static NSString * const TitleIdentifier = @"Title";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    UICollectionViewFlowLayout *grid = [[UICollectionViewFlowLayout alloc] init];
-    grid.itemSize = CGSizeMake(90, 90.0);
-    grid.sectionInset = UIEdgeInsetsMake(2.0, 2.0, 2.0, 2.0);
-    
-    MDBMoviesInGenreCollectionViewController *next = [[MDBMoviesInGenreCollectionViewController alloc] initWithCollectionViewLayout:grid];
     NSArray *genreMovies = self.moviesByGenre[self.genreByIndex[indexPath.section]];
     
-    next.movies = genreMovies;
-    next.title = self.genreByIndex[indexPath.section];
-    self->_selectedPath = indexPath;
-    
-    //next.useLayoutToLayoutNavigationTransitions = YES;
-    
-    [self.navigationController pushViewController:next animated:YES];
+    if([genreMovies count] > 1){
+        UICollectionViewFlowLayout *grid = [[UICollectionViewFlowLayout alloc] init];
+        grid.itemSize = CGSizeMake(90, 90.0);
+        grid.sectionInset = UIEdgeInsetsMake(2.0, 2.0, 2.0, 2.0);
+        
+        MDBMoviesInGenreCollectionViewController *next = [[MDBMoviesInGenreCollectionViewController alloc] initWithCollectionViewLayout:grid];
+        
+        next.movies = genreMovies;
+        next.title = self.genreByIndex[indexPath.section];
+        self->_selectedPath = indexPath;
+        
+        //next.useLayoutToLayoutNavigationTransitions = YES;
+        
+        [self.navigationController pushViewController:next animated:YES];
+    }
+    else{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        MDBMovieDetailsViewController *detailsVC = (MDBMovieDetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"movieDetails"];
+        detailsVC.movie = [genreMovies lastObject];
+        
+        [self.navigationController pushViewController:detailsVC animated:YES];
+    }
     
     
 }
@@ -169,7 +203,10 @@ static NSString * const TitleIdentifier = @"Title";
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    return self;
+    if([toVC isKindOfClass:[MDBMoviesInGenreCollectionViewController class]])
+        return self;
+    
+    return nil;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
@@ -185,6 +222,7 @@ static NSString * const TitleIdentifier = @"Title";
     NSMutableArray *snapshots = [NSMutableArray array];
     NSMutableArray *transformations = [NSMutableArray array];
     
+    [container addSubview:a.view];
     [container addSubview:b.view];
     
     for (NSInteger i = 0; i < [b.movies count]; i++) {
@@ -205,30 +243,20 @@ static NSString * const TitleIdentifier = @"Title";
         [transformations addObject:[NSValue valueWithCGRect:destFrame]];
     }
     
-    
-    
-    
-    CGRect secondFrame = [transitionContext finalFrameForViewController:b];
-    
-    // move the frame for b to the right
-    b.view.frame = CGRectMake(secondFrame.origin.x + secondFrame.size.width, secondFrame.origin.y, secondFrame.size.width, secondFrame.size.height);
-    
-    
-    
-    
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
+    b.view.alpha = 0.0;
+    
     [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        b.view.frame = secondFrame;
-        b.view.alpha = 1.0;
-        
+        a.view.alpha = 0.0;
+
         for (NSInteger i = [b.movies count] - 1; i >= 0 ; i--) {
             NSValue *frame = transformations[i];
             ((UIView*)snapshots[i]).frame = [frame CGRectValue];
         }
     } completion:^(BOOL finished) {
         //b.collectionView.hidden = NO;
-        
+        b.view.alpha = 1.0;
         for (NSInteger i = 0; i < [b.movies count]; i++) {
             [((UIView*)snapshots[i]) removeFromSuperview];
             

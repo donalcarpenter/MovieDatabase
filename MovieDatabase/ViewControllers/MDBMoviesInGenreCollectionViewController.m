@@ -159,9 +159,6 @@ static NSString * const CellIdentifier = @"Cell";
     
     for (NSInteger i = [genreMovies count] - 1; i >= 0; i--) {
         
-        
-        UICollectionViewLayoutAttributes *finalLayoutAttrs = [b.collectionView layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
-        
         MDBCollectionViewCell *sourceCell = (MDBCollectionViewCell*)[a.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:0]];
         
         MDBCollectionViewCell *b_cell = (MDBCollectionViewCell*)[b.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
@@ -197,7 +194,7 @@ static NSString * const CellIdentifier = @"Cell";
     
     [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         //a.view.frame = CGRectMake(a.view.frame.origin.x + a.view.frame.size.width, a.view.frame.origin.y, a.view.frame.size.width, a.view.frame.size.height);;
-        //b.view.alpha = 1.0;
+        b.view.alpha = 1.0;
         
         for (NSInteger i = [snapshots count] - 1; i >= 0 ; i--) {
             NSValue *frame = transformations[i];
