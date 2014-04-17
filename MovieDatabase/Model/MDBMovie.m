@@ -28,9 +28,9 @@ NSString * const MDBMovieDidFinishLoadingNotification = @"MDBMovieDidFinishLoadi
         NSString *plistLocation = [docsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"movie_%d.plist", movieId]];
         
         
-        NSLog(@"movie file: %@", plistLocation);
-        
         if([[NSFileManager defaultManager] fileExistsAtPath:plistLocation]){
+        
+            NSLog(@"using cached movie file: %@", plistLocation);
             
             NSDictionary *jsonData = [NSDictionary dictionaryWithContentsOfFile:plistLocation];
             [self loadMovieInfoFromDictionary:jsonData];

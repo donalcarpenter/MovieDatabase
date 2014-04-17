@@ -134,12 +134,17 @@ static NSString * const CellIdentifier = @"Cell";
         
         MDBCollectionViewCell *sourceCell = (MDBCollectionViewCell*)[a.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:0]];
         
+        MDBCollectionViewCell *b_cell = (MDBCollectionViewCell*)[b.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
+        
         sourceCell.hidden = YES;
         
         UIView* snapshot = [sourceCell snapshotViewAfterScreenUpdates:NO];
         snapshot.frame = [container convertRect:sourceCell.frame fromView:sourceCell.superview];
         
-        CGRect destFrame = CGRectMake(finalLayoutAttrs.frame.origin.x - offset.x, finalLayoutAttrs.frame.origin.y - offset.y, finalLayoutAttrs.frame.size.width, finalLayoutAttrs.frame.size.height);
+        
+        // CGRect destFrame = CGRectMake(finalLayoutAttrs.frame.origin.x - offset.x, finalLayoutAttrs.frame.origin.y - offset.y, finalLayoutAttrs.frame.size.width, finalLayoutAttrs.frame.size.height);
+        
+        CGRect destFrame = [container convertRect:b_cell.frame fromView:b_cell.superview];
         
         [container addSubview:snapshot];
         

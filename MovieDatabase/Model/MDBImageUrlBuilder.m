@@ -27,6 +27,7 @@
     self = [super init];
     if (self) {
         self->lockUntilSharedInstanceIsLoaded = [NSCondition new];
+        self->lockUntilSharedInstanceIsLoaded.name = @"MDBImageUrlBuilder lock";
     }
     return self;
 }
@@ -37,9 +38,12 @@
     dispatch_once(&onceToken, ^{
         sharedBuilderInner = [self new];
         
-        [sharedBuilderInner->lockUntilSharedInstanceIsLoaded lock];
         // now load the configuration
-        sharedBuilderInner->_loading = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"locking MDBImageURLBuilder on %@", [NSThread currentThread].name);
+            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded lock];
+            sharedBuilderInner->_loading = YES;
+        });
         
         NSString* uritmpl = @"%@configuration?api_key=%@";
         
@@ -57,16 +61,23 @@
             sharedBuilderInner->_profileImageSizes = imageConfig[@"profile_sizes"];
             sharedBuilderInner->_stillImageSizes = imageConfig[@"still_sizes"];
             
-            sharedBuilderInner->_loading = NO;
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                sharedBuilderInner->_loading = NO;
+                [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
+                NSLog(@"unlocking MDBImageURLBuilder on %@", [NSThread currentThread].name);
+                [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
+            });
+            
             
         } andErrorWith:^(NSString *errorDesc, NSUInteger errorCode) {
             // noop
             
-            sharedBuilderInner->_loading = NO;
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
-            [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                sharedBuilderInner->_loading = NO;
+                [sharedBuilderInner->lockUntilSharedInstanceIsLoaded broadcast];
+                NSLog(@"unlocking MDBImageURLBuilder on %@", [NSThread currentThread].name);
+                [sharedBuilderInner->lockUntilSharedInstanceIsLoaded unlock];
+            });
         }];
         
     });
@@ -82,6 +93,7 @@
     
     
     while (self.loading) {
+        NSLog(@"waiting for locked MDBImageURLBuilder");
         [self->lockUntilSharedInstanceIsLoaded wait];
     }
     
