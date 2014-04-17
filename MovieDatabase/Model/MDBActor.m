@@ -16,7 +16,7 @@
         self->_character = data[@"character"];
         self->_actorName = data[@"name"];
         self->_actorId = [data[@"id"] integerValue];
-        self->_pictureUrl = [self fullImageUrlForPath:data[@"profile_path"]];
+        self->_pictureUrl = data[@"profile_path"];
     }
     
     return self;

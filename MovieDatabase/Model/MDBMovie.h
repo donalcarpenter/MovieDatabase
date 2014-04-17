@@ -19,7 +19,7 @@ extern NSString * const MDBMovieDidFinishLoadingNotification;
 @property (nonatomic, copy) NSString* tagLine;
 @property (nonatomic, copy) NSString* overview;
 @property (nonatomic, copy) NSString* posterPath;
-@property (nonatomic, readwrite) NSUInteger releaseYear;
+@property (nonatomic, readwrite) NSString* releaseYear;
 @property (nonatomic, readwrite) CGFloat averageRating;
 @property (nonatomic, strong) MDBCast* cast;
 @property (nonatomic, strong) NSDictionary* images;

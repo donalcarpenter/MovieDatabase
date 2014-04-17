@@ -47,6 +47,8 @@
 		FE0405C318FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */; };
 		FE7E064418FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */; };
 		FE7E064518FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */; };
+		FE7E068D190009E400E1F962 /* MDBMovieCastTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E068C190009E400E1F962 /* MDBMovieCastTableTableViewController.m */; };
+		FE7E068E190009E400E1F962 /* MDBMovieCastTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E068C190009E400E1F962 /* MDBMovieCastTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMoviesInGenreCollectionViewController.m; path = ViewControllers/MDBMoviesInGenreCollectionViewController.m; sourceTree = "<group>"; };
 		FE7E064218FFBD4700E1F962 /* MDBMovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMovieDetailsViewController.h; path = ViewControllers/MDBMovieDetailsViewController.h; sourceTree = "<group>"; };
 		FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMovieDetailsViewController.m; path = ViewControllers/MDBMovieDetailsViewController.m; sourceTree = "<group>"; };
+		FE7E068B190009E400E1F962 /* MDBMovieCastTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMovieCastTableTableViewController.h; path = ViewControllers/MDBMovieCastTableTableViewController.h; sourceTree = "<group>"; };
+		FE7E068C190009E400E1F962 /* MDBMovieCastTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMovieCastTableTableViewController.m; path = ViewControllers/MDBMovieCastTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,8 @@
 				FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */,
 				FE7E064218FFBD4700E1F962 /* MDBMovieDetailsViewController.h */,
 				FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */,
+				FE7E068B190009E400E1F962 /* MDBMovieCastTableTableViewController.h */,
+				FE7E068C190009E400E1F962 /* MDBMovieCastTableTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				FE0405AF18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */,
 				FE04059218FE900600661776 /* MDBModel.m in Sources */,
 				FE04056B18FE8FAA00661776 /* MDBAppDelegate.m in Sources */,
+				FE7E068D190009E400E1F962 /* MDBMovieCastTableTableViewController.m in Sources */,
 				FE04056718FE8FAA00661776 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +383,7 @@
 				FE0405B518FF15D800661776 /* MDBStackLayout.m in Sources */,
 				FE0405BD18FF1B1E00661776 /* MDBCollectionViewSupplementaryCellView.m in Sources */,
 				FE04059B18FE903500661776 /* MDBMovie.m in Sources */,
+				FE7E068E190009E400E1F962 /* MDBMovieCastTableTableViewController.m in Sources */,
 				FE0405B018FF153B00661776 /* MDBMovieByGenreCollectionViewController.m in Sources */,
 				FE04059718FE902400661776 /* MDBPopularMovies.m in Sources */,
 				FE0405A318FE905200661776 /* MDBCast.m in Sources */,

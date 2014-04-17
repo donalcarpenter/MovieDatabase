@@ -11,7 +11,7 @@
 @interface MDBActor : MDBModel
 @property (nonatomic, copy) NSString* character;
 @property (nonatomic, copy) NSString* actorName;
-@property (nonatomic, copy) NSURL* pictureUrl;
+@property (nonatomic, copy) NSString* pictureUrl;
 @property (nonatomic, readonly) NSUInteger actorId;
 
 - (instancetype) initWithDictionary: (NSDictionary *) data;

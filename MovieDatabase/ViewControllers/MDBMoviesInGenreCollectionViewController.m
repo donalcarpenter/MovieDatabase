@@ -113,6 +113,7 @@ static NSString * const CellIdentifier = @"Cell";
     if([segue.identifier isEqualToString:@"movie"]){
         
         MDBMovieDetailsViewController *vc = (MDBMovieDetailsViewController*)segue.destinationViewController;
+        vc.title = self.selected.title;
         vc.movie = self.selected;
         
     }
@@ -158,6 +159,7 @@ static NSString * const CellIdentifier = @"Cell";
     
     for (NSInteger i = [genreMovies count] - 1; i >= 0; i--) {
         
+        
         UICollectionViewLayoutAttributes *finalLayoutAttrs = [b.collectionView layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
         
         MDBCollectionViewCell *sourceCell = (MDBCollectionViewCell*)[a.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:0]];
@@ -167,6 +169,10 @@ static NSString * const CellIdentifier = @"Cell";
         sourceCell.hidden = YES;
         
         UIView* snapshot = [sourceCell snapshotViewAfterScreenUpdates:NO];
+        
+        if(!snapshot)
+            continue;
+        
         snapshot.frame = [container convertRect:sourceCell.frame fromView:sourceCell.superview];
         
         
@@ -193,7 +199,7 @@ static NSString * const CellIdentifier = @"Cell";
         //a.view.frame = CGRectMake(a.view.frame.origin.x + a.view.frame.size.width, a.view.frame.origin.y, a.view.frame.size.width, a.view.frame.size.height);;
         //b.view.alpha = 1.0;
         
-        for (NSInteger i = [genreMovies count] - 1; i >= 0 ; i--) {
+        for (NSInteger i = [snapshots count] - 1; i >= 0 ; i--) {
             NSValue *frame = transformations[i];
             ((UIView*)snapshots[i]).frame = [frame CGRectValue];
         }
@@ -201,7 +207,12 @@ static NSString * const CellIdentifier = @"Cell";
         //b.collectionView.hidden = NO;
         
         for (NSInteger i = 0; i < [genreMovies count]; i++) {
-            [((UIView*)snapshots[i]) removeFromSuperview];
+            
+            // there may have been items that were off screen, so there
+            // won't be a snapshot
+            if(i < [snapshots count]){
+                [((UIView*)snapshots[i]) removeFromSuperview];
+            }
             
             MDBCollectionViewCell *b_cell = (MDBCollectionViewCell*)[b.collectionView cellForItemAtIndexPath: [NSIndexPath indexPathForRow:i inSection:b.selectedPath.section]];
             b_cell.hidden = NO;

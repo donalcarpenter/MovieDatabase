@@ -97,7 +97,7 @@ static NSString * const TitleIdentifier = @"Title";
     __weak MDBMovieByGenreCollectionViewController *weakSelf = self;
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         
-        [[MDBImageUrlBuilder sharedBuilder] loadImagePath:film.posterPath ofSize:MDBImageSizeTiny andType:MDBImageTypePoster thenHandleBy:^(UIImage *image) {
+        [[MDBImageUrlBuilder sharedBuilder] loadImagePath:film.posterPath ofSize:MDBImageSizeSmall andType:MDBImageTypePoster thenHandleBy:^(UIImage *image) {
             if ([weakSelf.collectionView.indexPathsForVisibleItems containsObject:indexPath]) {
                 MDBCollectionViewCell *c =
                 (MDBCollectionViewCell *)[weakSelf.collectionView cellForItemAtIndexPath:indexPath];
@@ -128,14 +128,14 @@ static NSString * const TitleIdentifier = @"Title";
     
     
     UICollectionViewFlowLayout *grid = [[UICollectionViewFlowLayout alloc] init];
-    grid.itemSize = CGSizeMake(75.0, 75.0);
-    grid.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
+    grid.itemSize = CGSizeMake(90, 90.0);
+    grid.sectionInset = UIEdgeInsetsMake(2.0, 2.0, 2.0, 2.0);
     
     MDBMoviesInGenreCollectionViewController *next = [[MDBMoviesInGenreCollectionViewController alloc] initWithCollectionViewLayout:grid];
     NSArray *genreMovies = self.moviesByGenre[self.genreByIndex[indexPath.section]];
     
     next.movies = genreMovies;
-    
+    next.title = self.genreByIndex[indexPath.section];
     self->_selectedPath = indexPath;
     
     //next.useLayoutToLayoutNavigationTransitions = YES;
