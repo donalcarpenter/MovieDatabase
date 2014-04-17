@@ -30,9 +30,6 @@ static NSString * const TitleIdentifier = @"Title";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.collectionView.backgroundColor = [UIColor colorWithWhite:0.25f alpha:1.0f];
     
     // register classes for displaying cells
     
@@ -144,6 +141,7 @@ static NSString * const TitleIdentifier = @"Title";
     //next.useLayoutToLayoutNavigationTransitions = YES;
     
     [self.navigationController pushViewController:next animated:YES];
+    
     
 }
 

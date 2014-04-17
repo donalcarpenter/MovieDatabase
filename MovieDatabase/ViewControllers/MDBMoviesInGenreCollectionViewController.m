@@ -12,9 +12,11 @@
 #import "MDBMovie.h"
 #import "MDBMovieByGenreCollectionViewController.h"
 #import "MDBImageUrlBuilder.h"
+#import "MDBMovieDetailsViewController.h"
 
 @interface MDBMoviesInGenreCollectionViewController ()
 @property (nonatomic, strong) NSOperationQueue *thumbnailQueue;
+@property (nonatomic, strong) MDBMovie *selected;
 @end
 
 static NSString * const CellIdentifier = @"Cell";
@@ -95,12 +97,39 @@ static NSString * const CellIdentifier = @"Cell";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MDBMovieDetailsViewController *detailsVC = (MDBMovieDetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"movieDetails"];
+    detailsVC.movie = self.movies[indexPath.row];
+    
+    [self.navigationController pushViewController:detailsVC animated:YES];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"movie"]){
+        
+        MDBMovieDetailsViewController *vc = (MDBMovieDetailsViewController*)segue.destinationViewController;
+        vc.movie = self.selected;
+        
+    }
+    
+}
+
 
 #pragma mark - Navigation
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    return self;
+    if([toVC isKindOfClass:[MDBMovieByGenreCollectionViewController class]])
+    {
+        return self;
+    }
+    
+    return nil;
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
@@ -114,7 +143,6 @@ static NSString * const CellIdentifier = @"Cell";
     MDBMovieByGenreCollectionViewController *b = (MDBMovieByGenreCollectionViewController*)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *container = [transitionContext containerView];
-    CGPoint offset = a.collectionView.contentOffset;
     
     NSMutableArray *snapshots = [NSMutableArray array];
     NSMutableArray *transformations = [NSMutableArray array];

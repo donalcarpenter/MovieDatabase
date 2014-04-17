@@ -45,6 +45,8 @@
 		FE0405BF18FF1B3300661776 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0405BE18FF1B3300661776 /* QuartzCore.framework */; };
 		FE0405C218FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */; };
 		FE0405C318FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */; };
+		FE7E064418FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */; };
+		FE7E064518FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		FE0405BE18FF1B3300661776 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE0405C018FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMoviesInGenreCollectionViewController.h; path = ViewControllers/MDBMoviesInGenreCollectionViewController.h; sourceTree = "<group>"; };
 		FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMoviesInGenreCollectionViewController.m; path = ViewControllers/MDBMoviesInGenreCollectionViewController.m; sourceTree = "<group>"; };
+		FE7E064218FFBD4700E1F962 /* MDBMovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDBMovieDetailsViewController.h; path = ViewControllers/MDBMovieDetailsViewController.h; sourceTree = "<group>"; };
+		FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDBMovieDetailsViewController.m; path = ViewControllers/MDBMovieDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,8 @@
 				FE0405AE18FF153B00661776 /* MDBMovieByGenreCollectionViewController.m */,
 				FE0405C018FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.h */,
 				FE0405C118FF1C1200661776 /* MDBMoviesInGenreCollectionViewController.m */,
+				FE7E064218FFBD4700E1F962 /* MDBMovieDetailsViewController.h */,
+				FE7E064318FFBD4700E1F962 /* MDBMovieDetailsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				FE04059A18FE903500661776 /* MDBMovie.m in Sources */,
 				FE0405B418FF15D800661776 /* MDBStackLayout.m in Sources */,
 				FE04059618FE902400661776 /* MDBPopularMovies.m in Sources */,
+				FE7E064418FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */,
 				FE0405A218FE905200661776 /* MDBCast.m in Sources */,
 				FE0405BA18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */,
 				FE0405A618FE9E9B00661776 /* MDBGenre.m in Sources */,
@@ -374,6 +381,7 @@
 				FE0405A318FE905200661776 /* MDBCast.m in Sources */,
 				FE04059F18FE904100661776 /* MDBActor.m in Sources */,
 				FE04058618FE8FAA00661776 /* MovieDatabaseTests.m in Sources */,
+				FE7E064518FFBD4700E1F962 /* MDBMovieDetailsViewController.m in Sources */,
 				FE0405A718FE9E9B00661776 /* MDBGenre.m in Sources */,
 				FE04059318FE900600661776 /* MDBModel.m in Sources */,
 				FE0405BB18FF1B1E00661776 /* MDBCollectionViewCell.m in Sources */,
@@ -575,6 +583,7 @@
 				FE04058B18FE8FAA00661776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE04058C18FE8FAA00661776 /* Build configuration list for PBXNativeTarget "MovieDatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +592,7 @@
 				FE04058E18FE8FAA00661776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
